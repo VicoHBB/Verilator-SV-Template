@@ -1,0 +1,12 @@
+# files for nvim
+.nvim
+# Files from Verilator
+/obj_dir
+.stamp.verilate
+# Files from Quartustools
+/qfiles
+# Files from svls
+svls.log
+#tags
+tags
+
