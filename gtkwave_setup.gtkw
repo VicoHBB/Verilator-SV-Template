@@ -1,0 +1,57 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Thu Oct  5 18:38:43 2023
+[*]
+[dumpfile] "/home/vhbb/Templates/HDL/SV_template/tb_sim/waveform.vcd"
+[dumpfile_mtime] "Thu Oct  5 18:37:32 2023"
+[dumpfile_size] 1458
+[savefile] "/home/vhbb/Templates/HDL/SV_template/gtkwave_setup.gtkw"
+[timestart] 0
+[size] 1712 1347
+[pos] -1 -1
+*-7.500000 401 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.mod_main.
+[sst_width] 328
+[signals_width] 110
+[sst_expanded] 1
+[sst_vpaned_height] 403
+@28
+TOP.mod_main.i_clk
+TOP.mod_main.i_E
+@200
+-i_D
+@c00023
+TOP.mod_main.i_D.Data[7:0]
+@29
+(0)TOP.mod_main.i_D.Data[7:0]
+(1)TOP.mod_main.i_D.Data[7:0]
+(2)TOP.mod_main.i_D.Data[7:0]
+(3)TOP.mod_main.i_D.Data[7:0]
+(4)TOP.mod_main.i_D.Data[7:0]
+(5)TOP.mod_main.i_D.Data[7:0]
+(6)TOP.mod_main.i_D.Data[7:0]
+(7)TOP.mod_main.i_D.Data[7:0]
+@1401201
+-group_end
+@c00022
+TOP.mod_main.i_D.Tag[3:0]
+@28
+(0)TOP.mod_main.i_D.Tag[3:0]
+(1)TOP.mod_main.i_D.Tag[3:0]
+(2)TOP.mod_main.i_D.Tag[3:0]
+(3)TOP.mod_main.i_D.Tag[3:0]
+@1401200
+-group_end
+@200
+-o_Q
+@22
+TOP.mod_main.o_Q.Data[7:0]
+TOP.mod_main.o_Q.Tag[3:0]
+@200
+-o_nQ
+@22
+TOP.mod_main.o_nQ.Data[7:0]
+TOP.mod_main.o_nQ.Tag[3:0]
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,8 @@
+read -incdir rtl/include
+read -sv rtl/mod_main.sv
+hierarchy -check -top mod_main
+proc; opt; fsm; opt; memory; opt
+# techmap; opt
+# synth -top mod_main -flatten
+# opt_clean -purge
+show
