@@ -1,17 +1,19 @@
+#include <iostream>                                   /* Need std::cout */
 #include <cstdint>
 #include "/usr/share/verilator/include/verilated.h"   /* Put whole route so that it does not mark errors */
-//#include <verilated.h>                              [> but you can call the file like this <]
+// #include <verilated.h>                             /* but you can call the file like this */
 #include "/usr/share/verilator/include/verilated_vcd_c.h"
 //#include <verilated_vcd_c.h>
-#include <iostream>                                   /* Need std::cout */
 #include "../obj_dir/Vmod_main.h"                     /* From Verilating "mod_main.sv" */
 #include "tb_mod_main.hpp"                            /* CAll some definitions */
 
 #define MAX_SIM_TIME 2000            /* Duration of the simulation in ps */
 #define NPs          20              /* Pulse width in ps */
 
-double sc_time_stamp( void );                  /* Called by $time in verilog */
-void Param_Init( void );                       /* Parameter initialization */
+using std::cout;
+using std::endl;
+
+void Param_Init(void);                         /* Parameter initialization */
 void Set_In_D( uint8_t tag, uint8_t value );   /* Set Input D */
 
 Vmod_main *top;                         /* Instantiation of the mode */
@@ -41,7 +43,7 @@ int main( int argc, char *argv[] )
     m_trace->open("tb_sim/waveform.vcd");
 
     int counter = 0;
-    int cycles   = 0;
+    int cycles  = 0;
 
     while ( clock_signal < MAX_SIM_TIME )
     {
@@ -90,15 +92,23 @@ int main( int argc, char *argv[] )
 
         }
 
-
         top->eval();                              // Evaluate mode
 
-        std::cout << top->o_Q << std::endl;       // Read a output
+        // Just print after a complete cycle pass
+        if (counter % 2 == 0)
+        {
+          cout << cycles << " -> ";           // Print outputs
+          cout << "o_Q: " << top->o_Q << " ";   // Print outputs
+          cout << "o_nQ: " << top->o_nQ << endl; // Print outputs
+        }
+        else
+        {
+        }
 
         m_trace->dump( clock_signal );
 
-        top->i_clk = !top->i_clk;                 // Enable or clk signal
-        clock_signal += NPs;                      //Time passes..
+        top->i_clk = !top->i_clk;                 // Toggle or clk signal
+        clock_signal += NPs;                      // Time passes..
         counter++;
         cycles = counter / 2u;
 
@@ -112,16 +122,6 @@ int main( int argc, char *argv[] )
     return 0;
 }
 
-double sc_time_stamp( void )    /* Called by $time in verilog */
-{
-    return clock_signal;        // Convets to double, to match what SystemC does
-}
-
-void Set_In_D( uint8_t tag, uint8_t value )
-{
-    top->i_D = ( tag << 8u ) | ( value & 0xFFu );
-}
-
 void Param_Init( void )
 {
     top->i_clk = 0u;
@@ -129,3 +129,7 @@ void Param_Init( void )
     Set_In_D( 0u, 0u );
 }
 
+void Set_In_D( uint8_t tag, uint8_t value )
+{
+    top->i_D = ( tag << 8u ) | ( value & 0xFFu );
+}
