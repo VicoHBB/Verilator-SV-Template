@@ -27,12 +27,14 @@ This project template is designed to streamline the development of SystemVerilog
     - [Important recipes for `make` tool](#important-recipes-for-make-tool)
     - [Steps to develop your project](#steps-to-develop-your-project)
     - [Multiple module project](#multiple-module-project)
-  - [To-Do](#to-do)
   - [References](#references)
 <!--toc:end-->
 
 ## To-Do
+- [ ] Implement `cmake` for compile output
 - [ ] Improve documentation
+* [ ] Complement the information and use of `yosys`.
+* [ ] Integrate `Xilinx` tools
 
 ## Requirements
 To carry out this project requires a `linux` based operating system (some tools can be used on `WinOS` or `MacOs`, for this, check the specifications of each tool, clicking on the elements of the next list) as well as open source tools such as:
@@ -425,11 +427,6 @@ module mod_main(
         //...
 	);
 ```
-
-## To-Do
-* Complement the information and use of `yosys`.
-* Complement the information and use of simulation.
-* Integrate Xilinx tools
 
 ## References
 * [Verilator][1]
