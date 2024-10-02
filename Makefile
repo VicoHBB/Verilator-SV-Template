@@ -19,7 +19,6 @@ TRACE      += --trace-structs --structs-packed --trace-threads 4
 TRACE      += --no-trace-top --trace-max-array "64"
 # RTLVIEWER
 # QUARTUS TOOLS
-# QSRC        = --source=$(TOP_MODULE).$(LDH) --source=mod_decoder.sv
 QSRC        = $(addprefix --source=, $(SRC_FILES))
 QUARTUS_MAP = /opt/intelFPGA/23.1/quartus/bin/quartus_map
 QUARTUS_NPP = /opt/intelFPGA/23.1/quartus/bin/quartus_npp

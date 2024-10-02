@@ -2,10 +2,11 @@
 
 This project template is designed to streamline the development of SystemVerilog projects using Verilator, GTKWave, and Make. The template includes a Makefile with various recipes for compiling, simulating, and visualizing the design. It also includes a directory structure for organizing the HDL files, test benches, and simulation waveforms.
 
+---
+
 <!--toc:start-->
 - [Systemverilog Template](#systemverilog-template)
   - [To-Do](#to-do)
-  - [Requirements](#requirements)
     - [Verilator](#verilator)
       - [Verilator installation](#verilator-installation)
         - [Ubuntu error](#ubuntu-error)
@@ -30,19 +31,18 @@ This project template is designed to streamline the development of SystemVerilog
   - [References](#references)
 <!--toc:end-->
 
+---
+
 ## To-Do
-- [ ] Implement `cmake` for compile output
-- [ ] Improve documentation
-* [ ] Complement the information and use of `yosys`.
-* [ ] Integrate `Xilinx` tools
-
-## Requirements
-To carry out this project requires a `linux` based operating system (some tools can be used on `WinOS` or `MacOs`, for this, check the specifications of each tool, clicking on the elements of the next list) as well as open source tools such as:
-
-* Linux Operating System (Suggested), this project has been tested on `Archlinux`, `Manjaro` & `Ubuntu`.
-* [Verilator][1]
-* [GTKWave][3]
-* [Quartus Prime Lite][5]
+1. [ ] Improve documentation.
+2. [ ] Implement `cmake` for compile output.
+3. [ ] Improve `quartus-tools` for synthesize.
+    - Review `quartus_map` flags &amp; document it.
+    - Review `global-assigments`
+    - Create `qsf` file for synthesis.
+    - Modified `Makefile` to use `quartus-pgm` tool (load the design on the board).
+4. [ ] Complement the information and use of `yosys`.
+5. [ ] Integrate `Xilinx` tools (on-hold)
 * [Yosys][6]
 * The text editor of your choice
 
