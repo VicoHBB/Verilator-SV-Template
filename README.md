@@ -23,7 +23,7 @@ HDL files, test benches, and simulation waveforms.
 ---
 
 ## To-Do
-1. [-] Improve documentation.
+1. [ ] Improve documentation.
 2. [ ] Implement `cmake` for compile output.
 3. [ ] Improve `quartus-tools` for synthesize.
     - Review `quartus_map` flags &amp; document it.
@@ -66,8 +66,8 @@ install [compile it][14]
 
 > [!TIP]
 > Sometimes verilator does not work properly, for solve this try to reinstall package, to be sure
-> that verilator is working properly run `verilator --help` on command line and compeer the output
-> with [verilator output](./docs/verilator_output.md)
+> that verilator is working as expected run `verilator --help` on command line and compare the
+> output with [verilator output](./docs/verilator_output.md)
 
 ### Last review
 
