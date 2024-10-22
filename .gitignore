@@ -3,6 +3,7 @@
 # Files for Verilator
 /obj_dir
 .stamp.verilate
+tb_sim/waveform.vcd
 # Files for Quartustools
 /db
 /incremental_db
