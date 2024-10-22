@@ -1,9 +1,7 @@
 #include <iostream>                                   /* Need std::cout */
 #include <cstdint>
-#include "/usr/share/verilator/include/verilated.h"   /* Put whole route so that it does not mark errors */
-// #include <verilated.h>                             /* but you can call the file like this */
-#include "/usr/share/verilator/include/verilated_vcd_c.h"
-//#include <verilated_vcd_c.h>
+#include <verilated.h>                             /* but you can call the file like this */
+#include <verilated_vcd_c.h>
 #include "../obj_dir/Vmod_main.h"                     /* From Verilating "mod_main.sv" */
 #include "tb_mod_main.hpp"                            /* CAll some definitions */
 

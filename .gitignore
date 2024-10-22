@@ -1,12 +1,18 @@
 # files for nvim
 .nvim
-# Files from Verilator
+# Files for Verilator
 /obj_dir
 .stamp.verilate
-# Files from Quartustools
-/qfiles
-# Files from svls
+# Files for Quartustools
+/db
+/incremental_db
+/output_files
+/simulation
+# Files for svls
 svls.log
 #tags
 tags
+# Files for clangd
+.cache/
+compile_commands.json
 
