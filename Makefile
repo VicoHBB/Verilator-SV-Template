@@ -142,3 +142,4 @@ clean:
 	rm -rf *.plist
 	rm -rf tb_sim/waveform.vcd
 	rm -rf compile_commands.json
+	rm -rf mod_main.sdc
