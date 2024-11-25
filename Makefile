@@ -138,9 +138,9 @@ clean:
 	rm -rf incremental_db/
 	rm -rf output_files/
 	rm -rf simulation/
+	rm -rf .cache/
 	rm -rf .stamp.*
 	rm -rf *.plist
 	rm -rf tb_sim/waveform.vcd
 	rm -rf compile_commands.json
 	rm -rf mod_main.sdc
-	rm -rf svls.log

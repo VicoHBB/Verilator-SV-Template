@@ -1,5 +1,6 @@
 # files for nvim
 .nvim
+.cache
 # Files for Verilator
 /obj_dir
 .stamp.verilate
