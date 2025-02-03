@@ -56,7 +56,7 @@ On `Archlinux` you can install dependencies using a package manager as [paru][10
 [pamac][12]. For the last version this template all dependencies have been installed using `paru`:
 
 ```bash
-paru -S varilator gtkwave quartus-free yosys clang make arrow-usb-blaster
+paru -S verilator gtkwave quartus-free yosys clang make arrow-usb-blaster
 ```
 
 
