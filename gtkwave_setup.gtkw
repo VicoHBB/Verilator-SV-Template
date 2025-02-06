@@ -1,19 +1,19 @@
 [*]
-[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
-[*] Thu Oct  5 18:38:43 2023
+[*] GTKWave Analyzer v3.3.120 (w)1999-2024 BSI
+[*] Fri Jan 31 00:22:47 2025
 [*]
-[dumpfile] "/home/vhbb/Templates/HDL/SV_template/tb_sim/waveform.vcd"
-[dumpfile_mtime] "Thu Oct  5 18:37:32 2023"
-[dumpfile_size] 1458
-[savefile] "/home/vhbb/Templates/HDL/SV_template/gtkwave_setup.gtkw"
+[dumpfile] "/home/vico/Templates/Verilator-SV-Template/tb_sim/waveform.vcd"
+[dumpfile_mtime] "Fri Jan 31 00:22:41 2025"
+[dumpfile_size] 1899
+[savefile] "/home/vico/Templates/Verilator-SV-Template/gtkwave_setup.gtkw"
 [timestart] 0
-[size] 1712 1347
+[size] 1920 934
 [pos] -1 -1
 *-7.500000 401 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.mod_main.
-[sst_width] 328
-[signals_width] 110
+[sst_width] 371
+[signals_width] 138
 [sst_expanded] 1
 [sst_vpaned_height] 403
 @28
