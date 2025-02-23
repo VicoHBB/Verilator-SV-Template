@@ -1,6 +1,6 @@
 # Systemverilog Template
 
-This project template is designed to streamline the development of SystemVerilog projects using
+This project template are designed to streamline the development of SystemVerilog projects using
 Verilator, GTKWave, and Make. The template includes a Makefile with various recipes for compiling,
 simulating, and visualizing the design. It also includes a directory structure for organizing the
 HDL files, test benches, and simulation waveforms.
@@ -68,7 +68,7 @@ Install dependencies using from the software sources or the software center.
 sudo apt-get install verilator gtkwave clang yosys build-essential
 ```
 
-For install `quartus-prime` you need to download the package from [quartus for linux][13] and
+For installing `quartus-prime` you need to download the package from [quartus for linux][13] and
 install [compile it][14]
 
 > [!TIP]
@@ -105,22 +105,21 @@ The `Makefile` includes the following targets:
 
 - Main targets
 
-    - `make`: Check for errors in the codes, and start the "verilating" process as well as look for errors in the test bench."
-    - `make run`: Creates the executable, runs the simulation and displays the generated waves in GTKWave."
-    - `make qrtl`: Do Analysis and Synthesis and open the RTLViewer with Intel tools."
-    - `make qfull`: Full compilation & analysis with Intel® tools"
-    - `make view`: Open RTLViewer by Intel® to view the schematic diagram."
-    - `make ys`: Create simple RTL deagram with Yosys tool."
-    - `make clean`: Clean the project."
-    - `make help`: Show a short description of the commands "
-
+    - `make`: Check for errors in the codes, and start the "verilating" process as well as look for errors in the test bench.
+    - `make run`: Creates the executable, runs the simulation and displays the generated waves in GTKWave.
+    - `make qrtl`: Do Analysis and Synthesis and open the RTLViewer with Intel tools.
+    - `make qfull`: Full compilation & analysis with Intel® tools
+    - `make view`: Open RTLViewer by Intel® to view the schematic diagram.
+    - `make ys`: Create simple RTL diagram with Yosys tool.
+    - `make clean`: Clean the project.
+    - `make help`: Show a short description of the commands
 - Intel® Tools targets
-    - `make synth`: Synthesis and analysis with Intel® tools."
-    - `make fit`: Place & Route with Intel® tools."
-    - `make qasm`: Generate Programming Fileswith Intel® tools."
-    - `make qsta`: Timing analysys with Intel® tools."
-    - `make qeda`: Write EDA netlist with Intel® tools."
-    - `make net`: Generate Netlist with Intel® tools."
+    - `make synth`: Synthesis and analysis with Intel® tools.
+    - `make fit`: Place & Route with Intel® tools.
+    - `make qasm`: Generate Programming Files with Intel® tools.
+    - `make qsta`: Timing analysis with Intel® tools.
+    - `make qeda`: Write EDA netlist with Intel® tools.
+    - `make net`: Generate netlist with Intel® tools.
 
 ## References
 * [Verilator][1]
