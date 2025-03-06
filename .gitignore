@@ -18,3 +18,5 @@ tags
 .cache/
 compile_commands.json
 Session.vim
+#verible files
+verible.filelist

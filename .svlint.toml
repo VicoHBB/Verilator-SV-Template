@@ -1,5 +1,5 @@
 [option]
-exclude_paths = ["docs","tb_sim", ".nvim", "qfiles"]
+exclude_paths = ["docs", "incremental_db", "obj_dir", "output_files", "tb_sim", ".nvim", "qfiles", "simulation"]
 indent = 4
 textwidth = 80
 prefix_inout = "b_"

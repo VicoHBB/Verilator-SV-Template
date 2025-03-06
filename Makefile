@@ -4,7 +4,7 @@ LDH         = sv
 # MODULES
 RTL_PATH    = rtl/
 TOP_MODULE  = mod_main
-INCLUDES    = $(RTL_PATH)/include
+INCLUDES    = $(RTL_PATH)include
 # Add the extra modules here
 MODULES    +=
 SRC_FILES   = $(addsuffix .$(LDH), $(TOP_MODULE) $(MODULES))
@@ -29,7 +29,7 @@ QUARTUS_NPP = /opt/intelFPGA/23.1/quartus/bin/quartus_npp
 QNUI        = /opt/intelFPGA/23.1/quartus/bin/qnui
 QFILES_OPT  = --read_settings_files=on --write_settings_files=off
 
-all: lint verilating
+all: lint verilating tags verible.filelist
 
 lint : $(VSRC)
 	@echo
@@ -46,6 +46,16 @@ build : .stamp.verilate
 	@echo
 	@echo "### BUILDING SIM ###"
 	intercept-build make -j `nproc` -C obj_dir -f V$(TOP_MODULE).mk V$(TOP_MODULE)
+
+tags: $(wildcard $(RTL_PATH)*)
+	@echo
+	@echo "### UPDATE TAGS ###"
+	ctags -R -f $@ $(RTL_PATH)
+
+verible.filelist: $(wildcard $(RTL_PATH)*)
+	@echo
+	@echo "### UPDATE FILELIST ###"
+	fd -e $(LDH) -e $(LDH)h . $(RTL_PATH) | sort > $@
 
 tb_sim/waveform.vcd : ./obj_dir/V$(TOP_MODULE)
 	@echo

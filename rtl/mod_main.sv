@@ -25,14 +25,15 @@
 /*****************************************************************************/
 /*          START OF MAIN MODULE                                             */
 /*****************************************************************************/
-module mod_main(
+module mod_main (
     // Inputs
-    input          i_clk,             // Enable Signal
-    input            i_E,             // Enable Signal
-    input  Bus_t     i_D,             // Data Input
+    input        i_clk, // Enable Signal
+    input          i_E, // Enable Signal
+    input  Bus_t   i_D, // Data Input
+    input     var_temp,
     // Outputs
-    output Bus_t     o_Q,             // Data Output
-    output Bus_t    o_nQ              // Output data denied
+    output Bus_t   o_Q, // Data Output
+    output Bus_t  o_nQ // Output data denied
 );
 
     /*************************************************************************/
@@ -64,9 +65,14 @@ module mod_main(
             o_Q  <= i_D;
         end
         else begin
-            o_Q  <= 12'b0;
+            o_Q <= 12'b0;
         end
     end : D_Type_Flip_Flop
+
+
+    /* always_comb begin */
+    /*     o_Q = i_D; */
+    /* end */
     /*************************************************************************/
     /*          END OF SEQUENTIAL PROCESS                                    */
     /*************************************************************************/
@@ -83,3 +89,14 @@ endmodule
 /*****************************************************************************/
 /*          END OF MAIN MODULE                                               */
 /*****************************************************************************/
+
+module mod_disable_example;
+    initial begin
+        fork
+            #10 $display("Task 1");
+            #20 $display("Task 2");
+        join_none
+
+        #5 disable fork;  // ✅ Correcto: Usa disable fork
+    end
+endmodule
