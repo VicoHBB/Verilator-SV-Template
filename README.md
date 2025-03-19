@@ -43,6 +43,7 @@ First you be sure that you have installed the following dependencies:
 - [Yosys][6]
 - [GNU Make][7]
 - [Clang](15)
+- [Ctags](16)
 - Any text editor of your choice
 
 > [!NOTE]
@@ -56,16 +57,16 @@ On `Archlinux` you can install dependencies using a package manager as [paru][10
 [pamac][12]. For the last version this template all dependencies have been installed using `paru`:
 
 ```bash
-paru -S verilator gtkwave quartus-free yosys clang make arrow-usb-blaster
+paru -S verilator gtkwave quartus-free yosys clang make arrow-usb-blaster ctags
 ```
 
 
 ### Ubuntu
 
-Install dependencies using from the software sources or the software center.
+Install dependencies using from the software sources or use [apt][17].
 
 ```bash
-sudo apt-get install verilator gtkwave clang yosys build-essential
+sudo apt-get install verilator gtkwave clang yosys ctags build-essential
 ```
 
 For installing `quartus-prime` you need to download the package from [quartus for linux][13] and
@@ -82,13 +83,14 @@ The most recent revision of this project was completed using the following tools
 respective versions:
 
 * Linux Operating System: ` Manjaro Linux x86_64 kernel: 6.6.52-1-MANJARO`
-* [Verilator][1]: `Version 5.028`
-* [GTKWave][3] : `Version v3.3.120`
-* [Quartus Prime Lite][5] : `Version 23.1`
-* [Yosys][6] : `Version 0.43`
+* [Verilator][1]: `Version 5.034`
+* [GTKWave][3] : `Version v3.3.121`
+* [Quartus Prime Lite][5] : `Version 24.1`
+* [Yosys][6] : `Version 0.44`
 * [GNU Make][7] : `Version 4.4.1`
-* [Clang][15] : `Version 18.1.8`
-* The text editor : [Neovim][9] `v0.10.1`
+* [Clang][15] : `Version 19.1.7`
+* [Ctags][15] : `Version 6.1.0`
+* The text editor : [Neovim][9] `v0.11.0`
 
 
 ## How to use it?
@@ -146,3 +148,5 @@ The `Makefile` includes the following targets:
 [13]: https://www.intel.com/content/www/us/en/software-kit/661017/intel-quartus-prime-lite-edition-design-software-version-20-1-for-linux.html "quartus-linux"
 [14]: https://askubuntu.com/questions/25961/how-do-i-install-a-tar-gz-or-tar-bz2-file "ubuntu package"
 [15]: https://clang.llvm.org/ "clang"
+[16]: https://github.com/universal-ctags/ctags "ctags"
+[17]: https://help.ubuntu.com/kubuntu/desktopguide/es/apt-get.html "apt"

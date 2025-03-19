@@ -18,8 +18,8 @@
 # -------------------------------------------------------------------------- #
 #
 # Quartus Prime
-# Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-# Date created = 19:08:33  October 10, 2024
+# Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+# Date created = 12:17:35  March 19, 2025
 #
 # -------------------------------------------------------------------------- #
 #
@@ -40,9 +40,9 @@
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY mod_main
-set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:08:33  OCTOBER 10, 2024"
-set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:17:35  MARCH 19, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/mod_main.sv
 set_global_assignment -name SEARCH_PATH rtl/include
 set_global_assignment -name SDC_FILE mod_main.sdc
