@@ -26,12 +26,12 @@
 /**********************************************************************************************************************/
 module mod_main (
     // Inputs
-    input        i_clk, // Enable Signal
+    input        i_clk, // Clock Signal
     input          i_E, // Enable Signal
     input  bus_t   i_D, // Data Input
     // Outputs
     output bus_t   o_Q, // Data Output
-    output bus_t  o_nQ  // Output data denied
+    output bus_t  o_nQ  // Output data inverted
 );
 
     /******************************************************************************************************************/
@@ -71,7 +71,7 @@ module mod_main (
             o_Q  <= i_D;
         end
         else begin
-            o_Q <= 12'b0;
+            o_Q <= bus_t'{Tag: 0, Data: 0};
         end
     end : D_Type_Flip_Flop
     /******************************************************************************************************************/

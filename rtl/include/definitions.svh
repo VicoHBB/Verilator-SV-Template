@@ -6,7 +6,7 @@
 * @brief   Definition of the project
 ************************************************************************************************************************
 * @Description
-* This is an example of header file for declareate datatypes and macros
+* This is an example of header file for declaring datatypes and macros
 *
 ************************************************************************************************************************
 */

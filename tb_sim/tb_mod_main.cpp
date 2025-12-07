@@ -1,4 +1,4 @@
-#include "tb_mod_main.hpp"        /* CAll some definitions */
+#include "tb_mod_main.hpp"        /* Call some definitions */
 #include "../obj_dir/Vmod_main.h" /* From Verilating "mod_main.sv" */
 #include <cstdint>
 #include <iostream>    /* Need std::cout */
@@ -16,11 +16,11 @@ void Set_In_D(uint8_t tag, uint8_t value); /* Set Input D */
 
 Vmod_main *top;                         /* Instantiation of the mode */
 
-// The 64-bit integer reduce wrap-over issues and allow modulus.
+// The 64-bit integer reduces wrap-over issues and allows modulus.
 // This is in units of the time precision
 // used in Verilog (or from --timescale-override)
 uint64_t clock_signal = 0;             /* Current simulation time */
-// The 64-bit integer reduce qrap over issues and allow modulus.
+// The 64-bit integer reduces wrap over issues and allows modulus.
 // This is in units of the time precision
 // used in Verilog (or from --timescale-override)
 
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
 
         m_trace->dump(clock_signal);
 
-        top->i_clk = !top->i_clk; // Toggle or clk signal
+        top->i_clk = !top->i_clk; // Toggle clock signal
         clock_signal += NPs;      // Time passes..
         counter++;
         cycles = counter / 2u;

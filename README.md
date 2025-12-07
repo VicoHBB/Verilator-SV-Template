@@ -1,6 +1,6 @@
-# Systemverilog Template
+# SystemVerilog Template
 
-This project template are designed to streamline the development of SystemVerilog projects using
+This project template is designed to streamline the development of SystemVerilog projects using
 Verilator, GTKWave, and Make. The template includes a Makefile with various recipes for compiling,
 simulating, and visualizing the design. It also includes a directory structure for organizing the
 HDL files, test benches, and simulation waveforms.
@@ -8,9 +8,9 @@ HDL files, test benches, and simulation waveforms.
 ---
 
 <!--toc:start-->
-- [Systemverilog Template](#systemverilog-template)
+- [SystemVerilog Template](#systemverilog-template)
   - [To-Do](#to-do)
-  - [Before to use](#before-to-use)
+  - [Prerequisites](#prerequisites)
     - [Archlinux](#archlinux)
     - [Ubuntu](#ubuntu)
     - [Last review](#last-review)
@@ -24,19 +24,19 @@ HDL files, test benches, and simulation waveforms.
 
 ## To-Do
 1. [ ] Improve documentation.
-    - [ ] Explain how to create you own project.
-2. [ ] Improve `quartus-tools` for synthesize.
-    - [x] Review `quartus_map` flags &amp; document it.
-    - [x] Review `global-assigments`
+    - [ ] Explain how to create your own project.
+2. [ ] Improve `quartus-tools` for synthesis.
+    - [x] Review `quartus_map` flags & document it.
+    - [x] Review `global-assignments`
     - [x] Create `qsf` file for synthesis.
     - [ ] Complete `quartus assignments` descriptions.
-    - [ ] Modified `Makefile` to use `quartus-pgm` tool (load the design on the board).
+    - [ ] Modify `Makefile` to use `quartus-pgm` tool (load the design on the board).
 3. [ ] Complement the information and use of `yosys`.
 4. [ ] Integrate `Xilinx` tools (on-hold)
 
-## Before to use
+## Prerequisites
 
-First you be sure that you have installed the following dependencies:
+First, ensure that you have installed the following dependencies:
 - [Verilator][2]
 - [GTKWave][3]
 - [Quartus Prime Lite][5]
@@ -53,8 +53,8 @@ First you be sure that you have installed the following dependencies:
 
 ### Archlinux
 
-On `Archlinux` you can install dependencies using a package manager as [paru][10], [yay][11] or
-[pamac][12]. For the last version this template all dependencies have been installed using `paru`:
+On `Archlinux` you can install dependencies using a package manager such as [paru][10], [yay][11] or
+[pamac][12]. For the latest version of this template, all dependencies were installed using `paru`:
 
 ```bash
 paru -S verilator gtkwave quartus-free yosys clang make arrow-usb-blaster ctags
@@ -63,17 +63,17 @@ paru -S verilator gtkwave quartus-free yosys clang make arrow-usb-blaster ctags
 
 ### Ubuntu
 
-Install dependencies using from the software sources or use [apt][17].
+Install dependencies from the software sources or use [apt][17].
 
 ```bash
 sudo apt-get install verilator gtkwave clang yosys ctags build-essential
 ```
 
-For installing `quartus-prime` you need to download the package from [quartus for linux][13] and
-install [compile it][14]
+To install `quartus-prime`, you need to download the package from [quartus for linux][13] and
+follow the installation instructions (e.g., extracting the [tarball][14]).
 
 > [!TIP]
-> Sometimes verilator does not work properly, for solve this try to reinstall package, to be sure
+> Sometimes Verilator does not work properly. To solve this, try reinstalling the package. To ensure
 > that verilator is working as expected run `verilator --help` on command line and compare the
 > output with [verilator output](./docs/verilator_output.md)
 
@@ -99,7 +99,7 @@ respective versions:
 
 1. Verilate your project: `make all` or `make`
 2. Build and run the simulation: `make run`
-3. Once that you confirm the simulation works as you expected synthesize you project: `make qrtl`
+3. Once you confirm the simulation works as expected, synthesize your project: `make qrtl`
 
 ### Make targets
 
