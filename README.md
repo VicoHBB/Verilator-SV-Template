@@ -21,7 +21,6 @@ HDL files, test benches, and simulation waveforms.
 <!--toc:end-->
 
 ---
-
 ## To-Do
 1. [ ] Improve documentation.
     - [ ] Explain how to create your own project.
@@ -44,12 +43,17 @@ First, ensure that you have installed the following dependencies:
 - [GNU Make][7]
 - [Clang](15)
 - [Ctags](16)
+- [vcdvcd][18]
 - Any text editor of your choice
 
 > [!NOTE]
 > `intercept-build` is part of the `scan-build toolset` from Clang. This tool is to create
 > `compile_commands.json` that lists the exact compiler commands used to compile each source
 > file in a project, helping tools like code editors and analyzers understand the build process.
+
+> [!NOTE]
+> Another usefull tool that also helps you if you are using AI tools is [vcdvcd][18], this simplifies the `.vcd` files
+> to see all signals an also helps you to use less tokes.
 
 ### Archlinux
 
@@ -60,6 +64,18 @@ On `Archlinux` you can install dependencies using a package manager such as [par
 paru -S verilator gtkwave quartus-free yosys clang make arrow-usb-blaster ctags
 ```
 
+[vcdvcd][18] is not on AUR, so you need to use install with `pip` as:
+
+```bash
+pip install vcdvcd --break-system-packages
+```
+
+If bash does not recognize the comand, look for in inside `~/.local/bin/` if the is, export to `$PATH` as:
+
+```bash
+export PATH=$PATH:~/.local/bin
+```
+
 
 ### Ubuntu
 
@@ -68,6 +84,13 @@ Install dependencies from the software sources or use [apt][17].
 ```bash
 sudo apt-get install verilator gtkwave clang yosys ctags build-essential
 ```
+
+For [vcdvcd][18] use `pip`:
+
+```bash
+pip install vcdvcd
+```
+
 
 To install `quartus-prime`, you need to download the package from [quartus for linux][13] and
 follow the installation instructions (e.g., extracting the [tarball][14]).
@@ -83,14 +106,14 @@ The most recent revision of this project was completed using the following tools
 respective versions:
 
 * Linux Operating System: ` Manjaro Linux x86_64 kernel: 6.6.52-1-MANJARO`
-* [Verilator][1]: `Version 5.034`
-* [GTKWave][3] : `Version v3.3.121`
-* [Quartus Prime Lite][5] : `Version 24.1`
-* [Yosys][6] : `Version 0.44`
+* [Verilator][1]: `Version 5.048`
+* [GTKWave][3] : `Version v3.3.127`
+* [Quartus Prime Lite][5] : `Version 25.1`
+* [Yosys][6] : `Version 0.64`
 * [GNU Make][7] : `Version 4.4.1`
-* [Clang][15] : `Version 19.1.7`
-* [Ctags][15] : `Version 6.1.0`
-* The text editor : [Neovim][9] `v0.11.0`
+* [Clang][15] : `Version 22.1.3`
+* [Ctags][15] : `Version 6.2.1`
+* The text editor : [Neovim][9] `v0.13.0`
 
 
 ## How to use it?
@@ -150,3 +173,4 @@ The `Makefile` includes the following targets:
 [15]: https://clang.llvm.org/ "clang"
 [16]: https://github.com/universal-ctags/ctags "ctags"
 [17]: https://help.ubuntu.com/kubuntu/desktopguide/es/apt-get.html "apt"
+[18]: https://github.com/cirosantilli/vcdvcd?tab=readme-ov-file#vcdcat-deltas "vcdvcd"

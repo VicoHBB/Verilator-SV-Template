@@ -15,18 +15,18 @@ EXT         = cpp
 TEST_BENCH  = tb_$(TOP_MODULE)
 #SOME FLAGS FOR TRACE WAVES
 TRACE       = --trace --x-assign unique --x-initial unique
-TRACE      += --trace-structs --structs-packed --trace-threads 4
+TRACE      += --trace-structs --threads 4
 TRACE      += --no-trace-top --trace-max-array "64"
 # RTLVIEWER
 # QUARTUS TOOLS
 QSRC        = $(addprefix --source=, $(SRC_FILES))
-QUARTUS_MAP = /opt/intelFPGA/24.1/quartus/bin/quartus_map
-QUARTUS_FIT = /opt/intelFPGA/24.1/quartus/bin/quartus_fit
-QUARTUS_ASM = /opt/intelFPGA/24.1/quartus/bin/quartus_asm
-QUARTUS_STA = /opt/intelFPGA/24.1/quartus/bin/quartus_sta
-QUARTUS_EDA = /opt/intelFPGA/24.1/quartus/bin/quartus_eda
-QUARTUS_NPP = /opt/intelFPGA/24.1/quartus/bin/quartus_npp
-QNUI        = /opt/intelFPGA/24.1/quartus/bin/qnui
+QUARTUS_MAP = /opt/intelFPGA/25.1/quartus/bin/quartus_map
+QUARTUS_FIT = /opt/intelFPGA/25.1/quartus/bin/quartus_fit
+QUARTUS_ASM = /opt/intelFPGA/25.1/quartus/bin/quartus_asm
+QUARTUS_STA = /opt/intelFPGA/25.1/quartus/bin/quartus_sta
+QUARTUS_EDA = /opt/intelFPGA/25.1/quartus/bin/quartus_eda
+QUARTUS_NPP = /opt/intelFPGA/25.1/quartus/bin/quartus_npp
+QNUI        = /opt/intelFPGA/25.1/quartus/bin/qnui
 QFILES_OPT  = --read_settings_files=on --write_settings_files=off
 
 all: lint verilating tags verible.filelist

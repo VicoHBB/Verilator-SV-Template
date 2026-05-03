@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY mod_main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:17:35  MARCH 19, 2025"
-set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
 set_global_assignment -name SYSTEMVERILOG_FILE rtl/mod_main.sv
 set_global_assignment -name SEARCH_PATH rtl/include
 set_global_assignment -name SDC_FILE mod_main.sdc
